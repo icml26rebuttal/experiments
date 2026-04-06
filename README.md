@@ -1,9 +1,11 @@
 # Code for "Ain't no frequency high (low) enough: adversarial robustness through the lens of structured transforms" -  ICML'26 submission
-Experimental results for the rebuttal of the paper "Ain't no frequency high (low) enough: adversarial robustness through the lens of structured transforms". The 2 main scripts are: 
+Experimental results for the rebuttal of the paper "Ain't no frequency high (low) enough: adversarial robustness through the lens of structured transforms". The 3 main scripts are: 
 
 a) ``eval_transferability.py`` -> generates results for the Tables 1-4 of the manuscript, as well as the additional tables mentioned in the rebuttal, for the CIFAR10. It is called as ``python eval_transferability.py --case case --model-source class``, where case lies in {case1, case2, case3, case4}, and class lies in {pretrained, robustbench}. Case1 = proposed DGF-PGD, case2 = standard PGD, case3 = F-PGD, case4 = AutoPGD. 
 
 b) ``eval_transferability_cifar100.py`` -> same as ``eval_transferability.py``, but for CIFAR100.
+
+c) ``eval_transferability_imagenet.py`` -> same as ``eval_transferability.py``, but for ImageNet.
 
 Auxiliary scripts called by ``eval_transferability.py`` and ``eval_transferability_cifar100.py``:
 
@@ -22,3 +24,5 @@ The results pertaining to the answers of the rebuttal are organized in folders a
 3) **Transformers** -> updated transferability Tables 3 and 5 for pretrained and Robustbench models, for the proposed attack, on CIFAR10/100, including Transformer-based architectures.
 
 4) **Baselines** -> transferability tables for pretrained and Robustbench models, for the baseline attacks of the standard PGD and the F-PGD, on CIFAR10.
+
+5) **ImageNet** -> transferability tables for Robustbench models, for the proposed and the baseline attacks of the standard PGD and the F-PGD, on ImageNet. The folder also contains visual comparisons from samples taken by exemplary models, among all three attacks.
